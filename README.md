@@ -14,17 +14,20 @@
   * PUT    /api/v1//students/1  Update student
   * DELETE /api/v1//students/1  Delete student
 
+
   * GET    /api/v1/teachers     Get all teacher              
   * GET    /api/v1/teachers/1   Get specific teacher         
   * POST   /api/v1/teachers     Create teacher
   * PUT    /api/v1//teachers/1  Update Teacher
   * DELETE /api/v1//teachers/1  Delete Teacher
 
+
   * GET    /api/v1/courses      Get all courses              
   * GET    /api/v1/courses/1    Get specific course         
   * POST   /api/v1/courses      Create course
   * PUT    /api/v1//courses/1   Update course
   * DELETE /api/v1//courses/1   Delete course
+
 
   * GET    /api/v1/grades       Get all grades              
   * GET    /api/v1/grades/1     Get specific grade         
