@@ -5,15 +5,16 @@
   * The system provides statistical calculations over this data.
   * The communication with the system is RESTful over HTTP.
 
+## Entity Relationship Diagram of highlearn 
+ ![alt text](images/erd.png "Highlearn ERD")
+
 ## Implemented API
   Used one level routing to simplify CRUD operation on models (not used nested routes like /course/1/grades)
-  
   * GET    /api/v1/students     Get all students
   * GET    /api/v1/students/1   Get specific student        
   * POST   /api/v1/students     Create student
   * PUT    /api/v1//students/1  Update student
   * DELETE /api/v1//students/1  Delete student
-
 
   * GET    /api/v1/teachers     Get all teacher              
   * GET    /api/v1/teachers/1   Get specific teacher         
@@ -35,6 +36,10 @@
   * PUT    /api/v1//grades/1    Update grade
   * DELETE /api/v1//grades/1    Delete grade
 
+### Things to empasize
+  To not duplicate data between teacher and student - I used (STI) Single Table Inheritance, meaning teacher and student models
+  both using user table and differintiated by 'type' field
+  Same for API endpoints of teacher / students - both using users controller
 
 ### Things that has been left out and need improvement
   Did minimal test coverage for main functionality - Unit Tests / Request Tests (API)
