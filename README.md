@@ -45,7 +45,8 @@
   Same for API endpoints of teacher / students - both using users controller
 
 ### Things that has been left out and need improvement
-  Did minimal test coverage for main functionality - Unit Tests / Request Tests (API)
+  * Did minimal test coverage for main functionality - Unit Tests / Request Tests (API)
+  * For Calculated fields I am using SQL queries for each request, need improvement - add table with calculates fields for this actions and every time grade/course/teacher/student added/changed/removed update this table via model callbacks, also we may cache this table to get results faster
 
 ## Getting Started
 
@@ -57,11 +58,18 @@ These instructions will get you a copy of the project up and running on your loc
 * Installed MySQL2
 
 ### Database setup
-
+ * create highlearn database
+ * username: highlearn, password: highlearn_123456
+ * mysql -u root -p
+ * mysql> CREATE DATABASE highlearn;
+ * mysql> CREATE USER 'highlearn'@'localhost' IDENTIFIED BY ‘highlearn_123456’;
+ * mysql> GRANT SELECT, INSERT, REFERENCES, INDEX, UPDATE, DELETE, CREATE, DROP, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON highlearn.* TO 'highlearn'@'localhost';
+ * same things must be done for highlearn_test database
 
 ### Token based authentication using doorkeeper via oauth token
 
   Demo token: "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4"
+  Testing with curl: curl -H 'Accept: application/json' -H "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4" http://localhost:5555/api/v1/students
 
 ### Installing and running
   * git clone https://github.com/warolv/high-learn.git
