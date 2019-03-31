@@ -26,6 +26,16 @@ class Api::V1::UsersController < ApplicationController
     head :no_content
   end
 
+  def highest_average_in_courses
+    @user = Student.find(Student.highest_average_in_courses)
+    json_response(@user)
+  end
+
+  def max_students
+    @user = Teacher.find(Teacher.get_teacher_id_with_max_number_of_students)
+    json_response(@user)
+  end
+
   private
 
   def user_params

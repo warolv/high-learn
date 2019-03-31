@@ -15,12 +15,14 @@
   * POST   /api/v1/students     Create student
   * PUT    /api/v1//students/1  Update student
   * DELETE /api/v1//students/1  Delete student
+  * GET    /api/v1/students/highest_average_in_courses  The student with the highest average in courses 
 
   * GET    /api/v1/teachers     Get all teacher              
   * GET    /api/v1/teachers/1   Get specific teacher         
   * POST   /api/v1/teachers     Create teacher
   * PUT    /api/v1//teachers/1  Update Teacher
   * DELETE /api/v1//teachers/1  Delete Teacher
+  * GET    /api/v1/teachers/max_students  The teacher with the max number of students.
 
 
   * GET    /api/v1/courses      Get all courses              
@@ -28,6 +30,7 @@
   * POST   /api/v1/courses      Create course
   * PUT    /api/v1//courses/1   Update course
   * DELETE /api/v1//courses/1   Delete course
+  * GET    /api/v1/easiest      Get the easiest course (the one with the highest average of grades)
 
 
   * GET    /api/v1/grades       Get all grades              

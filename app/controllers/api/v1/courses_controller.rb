@@ -32,6 +32,11 @@ class Api::V1::CoursesController < ApplicationController
     @course.destroy
     head :no_content
   end
+
+  def easiest
+    @course = Course.find(Course.get_easiest_course)
+    json_response(@course)
+  end
   
   private
 
