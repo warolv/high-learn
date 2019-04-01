@@ -9,4 +9,7 @@ require 'faker'
   end
 end
 
+# Token for Demo purposes
+ApiToken.create(token:, 'development')
+
 
