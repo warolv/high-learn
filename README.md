@@ -48,8 +48,8 @@
   * For Calculated fields I am using SQL queries for each request, need improvement - add table with calculates fields for this actions and every time grade/course/teacher/student added/changed/removed update this table via model callbacks, also we may cache this table to get results faster
 
 ### Token based authentication 
-  Demo token: "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4"
-  Testing with curl: curl -H 'Accept: application/json' -H "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4" http://localhost:3000/api/v1/students
+  Demo token: "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8"
+  Testing with curl: curl -H 'Accept: application/json' -H "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8" http://localhost:3000/api/v1/students
 
 ### Installing and running
   * git clone https://github.com/warolv/high-learn.git

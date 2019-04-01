@@ -10,6 +10,6 @@ require 'faker'
 end
 
 # Token for Demo purposes
-ApiToken.create(token:, 'development')
+ApiToken.create(token: '08ede18ff7aa239d0259a989ae765ebc04ca91b8', env: 'development')
 
 
