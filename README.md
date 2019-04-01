@@ -53,7 +53,7 @@
   Testing with curl: curl -H 'Accept: application/json' -H "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4" http://localhost:5555/api/v1/students
 
 ### Installing and running
-  * https://github.com/warolv/high-learn.git
+  * git clone https://github.com/warolv/high-learn.git
   * docker-compose build
   * docker-compose up -d
   * docker-compose run web bundle install
