@@ -10,6 +10,7 @@
 
 ## Implemented API
   Used one level routing to simplify CRUD operation on models (not used nested routes like /course/1/grades)
+ 
   * GET    /api/v1/students     Get all students
   * GET    /api/v1/students/1   Get specific student        
   * POST   /api/v1/students     Create student
@@ -24,14 +25,12 @@
   * DELETE /api/v1//teachers/1  Delete Teacher
   * GET    /api/v1/teachers/max_students  The teacher with the max number of students.
 
-
   * GET    /api/v1/courses      Get all courses              
   * GET    /api/v1/courses/1    Get specific course         
   * POST   /api/v1/courses      Create course
   * PUT    /api/v1//courses/1   Update course
   * DELETE /api/v1//courses/1   Delete course
   * GET    /api/v1/easiest      Get the easiest course (the one with the highest average of grades)
-
 
   * GET    /api/v1/grades       Get all grades              
   * GET    /api/v1/grades/1     Get specific grade         
@@ -48,39 +47,23 @@
   * Did minimal test coverage for main functionality - Unit Tests / Request Tests (API)
   * For Calculated fields I am using SQL queries for each request, need improvement - add table with calculates fields for this actions and every time grade/course/teacher/student added/changed/removed update this table via model callbacks, also we may cache this table to get results faster
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
-
-### Prerequisites
-
-* Installed ruby envinronment - 2.3.1 version
-* Installed MySQL2
-
-### Database setup
- * create highlearn database
- * username: highlearn, password: highlearn_123456
- * mysql -u root -p
- * mysql> CREATE DATABASE highlearn;
- * mysql> CREATE USER 'highlearn'@'localhost' IDENTIFIED BY ‘highlearn_123456’;
- * mysql> GRANT SELECT, INSERT, REFERENCES, INDEX, UPDATE, DELETE, CREATE, DROP, ALTER, CREATE TEMPORARY TABLES, LOCK TABLES ON highlearn.* TO 'highlearn'@'localhost';
- * same things must be done for highlearn_test database
-
 ### Token based authentication using doorkeeper via oauth token
 
   Demo token: "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4"
   Testing with curl: curl -H 'Accept: application/json' -H "Authorization: Bearer 695810e253c27ab86838315855b05dd4a084007bc76c5a3cfb3a6a5b68be19e4" http://localhost:5555/api/v1/students
 
 ### Installing and running
-  * git clone https://github.com/warolv/high-learn.git
-  * cd high-learn
-  * bundle install
-  * rake db:migrate
-  * rails s -p 5555
+  * https://github.com/warolv/high-learn.git
+  * docker-compose build
+  * docker-compose up -d
+  * docker-compose run web bundle install
+  * docker-compose run web bundle exec rake db:create - Create DB
+  * docker-compose run web bundle exec rake db:migrate - Run Migrations
+  * docker-compose run web bundle exec rake db:seed - Seed DB with some data (teacher/students/grades/courses)
 
 ## Running the tests
 
-bundle exec rspec
+* docker-compose run web bundle exec rspec
 
 ## Built With
 
@@ -93,5 +76,3 @@ Ruby on Rails 5 API version
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-
