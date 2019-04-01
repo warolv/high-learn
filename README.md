@@ -30,7 +30,7 @@
   * POST   /api/v1/courses      Create course
   * PUT    /api/v1//courses/1   Update course
   * DELETE /api/v1//courses/1   Delete course
-  * GET    /api/v1/easiest      Get the easiest course (the one with the highest average of grades)
+  * GET    /api/v1/courses/easiest      Get the easiest course (the one with the highest average of grades)
 
   * GET    /api/v1/grades       Get all grades              
   * GET    /api/v1/grades/1     Get specific grade         
