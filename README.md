@@ -48,8 +48,8 @@
   * For Calculated fields I am using SQL queries for each request, need improvement - add table with calculates fields for this actions and every time grade/course/teacher/student added/changed/removed update this table via model callbacks, also we may cache this table to get results faster
 
 ### Token based authentication 
-  Demo token: "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8"
-  Testing with curl: curl -H 'Accept: application/json' -H "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8" http://localhost:3000/api/v1/students
+  * Demo token: "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8"
+  * Testing with curl: curl -H 'Accept: application/json' -H "Authorization: 08ede18ff7aa239d0259a989ae765ebc04ca91b8" http://localhost:3000/api/v1/students
 
 ### Installing and running
   * git clone https://github.com/warolv/high-learn.git
@@ -59,7 +59,7 @@
   * docker-compose run web bundle install
   * docker-compose build
   * docker-compose run web bundle exec rake db:create db:migrate db:seed 
-  * check in browser http://localhost/api/v1/students 
+  * check in browser if rails app is running http://localhost:3000 
 
 ## Running the tests
   * docker-compose run web bundle exec rake db:migrate RAILS_ENV=test
