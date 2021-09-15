@@ -56,8 +56,6 @@
   * cd high-learn
   * docker-compose build
   * docker-compose up -d
-  * docker-compose run web bundle install
-  * docker-compose build
   * docker-compose run web bundle exec rake db:create db:migrate db:seed 
   * check in browser if rails app is running http://localhost:3000 
 
@@ -67,11 +65,11 @@
 
 ## Built With
 
-  Ruby on Rails 5 - API version, postgres DB
+  Ruby on Rails 6 - API version, postgres DB
 
 ## Authors
 
-* **Igor Zhivilo** - [warolv.net](https://warolv.net)
+* **Igor Zhivilo**
 
 ## License
 
