@@ -1,4 +1,8 @@
-# Highlearn - REST API of the school system for managing course grades built with Ruby on Rails.
+# Highlearn REST API built with Ruby on Rails
+
+![highlearn-logo](images/logo.png)
+
+## REST API of the school system for managing course grades built with Ruby on Rails.
 
 ## Description
   * The system allows other systems to create and modify Students, Teachers, Courses and Grades using REST API endpoints.
